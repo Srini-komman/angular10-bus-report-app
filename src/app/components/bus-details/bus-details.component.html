@@ -7,11 +7,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Domenic</td>
-      <td>88,110</td>
-      <td>dcode</td>
+    <tr *ngFor="let bus of busDetails">
+      <td>{{bus.busId}}</td>
+      <td><b>{{bus.routeVariant | slice:0:3}}</b>{{bus.routeVariant | slice:3: bus.routeVariant.length}}</td>
+      <td>{{bus.deviationFromTimetable}}</td>
     </tr>
   </tbody>
 </table>

@@ -9,7 +9,7 @@ export class BusReportsService {
   constructor(private http: HttpClient) { }
 
   getBusServices = () => {
-    return this.http.get('../data/bus-services-data.json');
+    return this.http.get('/assets/bus-services-data.json');
   }
 
 }

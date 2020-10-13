@@ -1,1 +1,15 @@
-<p>bus-organisations works!</p>
+<div class="bus-service-container" *ngFor="let busReport of busReportsData">
+  <h3 (click)="isOpen = true">
+    <span class="bus-service-title">{{busReport.organisation}} - {{busReport.date}}</span>
+    <a>
+      <span class="glyphicon glyphicon-chevron-down" *ngIf="false"></span>
+      <span class="glyphicon glyphicon-chevron-up" *ngIf="true"></span>
+    </a>
+  </h3>
+
+  <!--table to show the vus service details-->
+  <div *ngIf="true">
+    <app-bus-details [busDetails]="busReport.busData"></app-bus-details>
+
+  </div>
+</div>
