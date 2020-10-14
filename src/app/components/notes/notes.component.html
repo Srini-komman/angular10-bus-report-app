@@ -1,7 +1,6 @@
-
-<form>
+<form (submit)="submitNotes()" [formGroup]="notesFormGroup">
   <div class="form-group">
-    <textarea class="form-control" rows="3"></textarea>
-    <button type="submit" class="btn btn-primary mt-2" (click)="submitNotes($event)">Save Notes</button>
+    <textarea class="form-control" id="notesArea" formControlName="notesArea" rows="3"></textarea>
+    <button type="submit" [ngClass]="{'btn-disable' : notesFormGroup.get('notesArea').errors}" class="btn btn-primary mt-2">Save Notes</button>
   </div>
 </form>

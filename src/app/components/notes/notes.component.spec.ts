@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NotesComponent } from './notes.component';
 
@@ -8,7 +9,11 @@ describe('NotesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotesComponent ]
+      declarations: [ NotesComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule
+      ]
     })
     .compileComponents();
   }));
@@ -19,7 +24,7 @@ describe('NotesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create NotesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
