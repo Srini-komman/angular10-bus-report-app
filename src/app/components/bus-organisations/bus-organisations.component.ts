@@ -12,6 +12,10 @@ export class BusOrganisationsComponent implements OnInit {
   busReportsData = [];
   constructor(private busReportsService: BusReportsService) { }
 
+  slideInOut = (busReport) => {
+    busReport.slideIn = !busReport.slideIn;
+  }
+
   ngOnInit(): void {
     this.busReportsService.getBusServices()
         .subscribe((busOrganisations: BusOrganisations) => {

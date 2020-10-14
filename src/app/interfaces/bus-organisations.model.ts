@@ -6,6 +6,7 @@ export interface BusOrganisations {
           busData: Array<Bus>;
           date: string;
           organisation: string;
+          slideIn: boolean;
       }
   ];
 }
