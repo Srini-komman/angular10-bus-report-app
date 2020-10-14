@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { BusDetailsComponent } from './bus-details.component';
 
@@ -21,5 +22,11 @@ describe('BusDetailsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should contain a table tag', () => {
+    const tableElement = fixture.debugElement.query(By.css('table'));
+    //debugger;
+    //expect(tableElement.nativeElement).toBeTruthy();
   });
 });

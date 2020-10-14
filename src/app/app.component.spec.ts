@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -6,7 +7,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
-      ],
+      ]
     }).compileComponents();
   }));
 
@@ -22,10 +23,9 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-bus-report-app');
   });
 
-  it('should render title', () => {
+  it('should contain a h1 tag with text content Bus Reports', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-bus-report-app app is running!');
+    const h1Element = fixture.debugElement.query(By.css('h1'));
+    expect(h1Element.nativeElement.textContent).toBe('Bus Reports');
   });
 });

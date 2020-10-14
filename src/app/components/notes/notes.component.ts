@@ -8,12 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class NotesComponent implements OnInit {
 
   public notesData = [];
-  public notesInput: string;
   constructor() { }
 
-  submitNotes(): void {
-    if (this.notesInput) {
-      this.notesData.push(this.notesInput);
+  submitNotes(event: any): void {
+    if (event.target.value) {
+      this.notesData.push(event.target.value);
     }
 
     // Here we need to implement asynchronous call to back end.
