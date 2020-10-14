@@ -7,6 +7,8 @@ import { BusDetailsComponent } from './components/bus-details/bus-details.compon
 import { BusOrganisationsComponent } from './components/bus-organisations/bus-organisations.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StatusMapPipe } from './pipes/status-map.pipe';
+import { NotesComponent } from './components/notes/notes.component';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { StatusMapPipe } from './pipes/status-map.pipe';
     AppComponent,
     BusDetailsComponent,
     BusOrganisationsComponent,
-    StatusMapPipe
+    StatusMapPipe,
+    NotesComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
