@@ -41,11 +41,11 @@ describe('BusOrganisationsComponent', () => {
     expect(divOrganisations.length).toEqual(2);
   });
 
-  it('should contain a child element with organisation label Sydney Buses - 25/09/2015 ', () => {
+  it('should contain a child element with organisation label Sydney Buses - 25/09/2015', () => {
     component.busReportsData = BUS_REPORT.data;
     fixture.detectChanges();
     const divOrganisations = fixture.debugElement.queryAll(By.css('.bus-organisations'));
-    expect(divOrganisations[0].nativeNode.innerText).toEqual('Sydney Buses - 25/09/2015 ');
+    expect(divOrganisations[0].nativeNode.innerText).toEqual('Sydney Buses - 25/09/2015');
   });
 
   it('should contain 2 child components for displaying bus services that belongs to the Sydney Buses', () => {

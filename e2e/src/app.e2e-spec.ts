@@ -8,9 +8,21 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Bus Reports', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('angular-bus-report-app app is running!');
+    expect(page.getTitleText()).toEqual('Bus Reports');
+  });
+
+  it('should open the bus details when clicking on specific organisation title', () => {
+    page.navigateTo();
+    page.getOrganisationHeader().click();
+    browser.driver.sleep(800);
+    expect(page.getBusDetailsTable()).not.toBeNull();
+  });
+
+  it('should display the organisation title Sydney Buses - 25/09/2015', () => {
+    page.navigateTo();
+    expect(page.getOrganisationTitles()).toEqual('Sydney Buses - 25/09/2015');
   });
 
   afterEach(async () => {
