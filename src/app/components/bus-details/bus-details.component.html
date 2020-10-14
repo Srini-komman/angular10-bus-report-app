@@ -10,7 +10,7 @@
     <tr *ngFor="let bus of busDetails">
       <td>{{bus.busId}}</td>
       <td><b>{{bus.routeVariant | slice:0:3}}</b>{{bus.routeVariant | slice:3: bus.routeVariant.length}}</td>
-      <td>{{bus.deviationFromTimetable}}</td>
+      <td [ngStyle]="{'color':'white'}" [@status]="{value: bus.deviationFromTimetable | statusMap}">{{bus.deviationFromTimetable | statusMap}}</td>
     </tr>
   </tbody>
 </table>

@@ -5,18 +5,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BusDetailsComponent } from './components/bus-details/bus-details.component';
 import { BusOrganisationsComponent } from './components/bus-organisations/bus-organisations.component';
-import { PartialBoldPipe } from './pipes/partial-bold.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StatusMapPipe } from './pipes/status-map.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BusDetailsComponent,
     BusOrganisationsComponent,
-    PartialBoldPipe
+    StatusMapPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [],
