@@ -1,4 +1,4 @@
-<div *ngFor="let busReport of busReportsData">
+<div *ngFor="let busReport of busReportsData" class="bus-organisations">
   <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center" (click)="slideInOut(busReport)">
       {{busReport.organisation}} - {{busReport.date}}

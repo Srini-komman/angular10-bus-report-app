@@ -6,7 +6,7 @@ $color-light-blue: #ADD8E6;
 $color-black: #000000;
 $color-white: #dddddd;
 
-.content-table {
+.content-bus-details-table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
@@ -16,27 +16,27 @@ $color-white: #dddddd;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.content-table thead tr {
+.content-bus-details-table thead tr {
   background-color: $color-light-blue;
   color: $color-black;
   text-align: left;
   font-weight: bold;
 }
 
-.content-table th,
-.content-table td {
+.content-bus-details-table th,
+.content-bus-details-table td {
   padding: 12px 15px;
 }
 
-.content-table tbody tr {
+.content-bus-details-table tbody tr {
   border-bottom: 1px solid $color-white;
 }
 
-.content-table tbody tr:nth-of-type(even) {
+.content-bus-details-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
 
-.content-table tbody tr:last-of-type {
+.content-bus-details-table tbody tr:last-of-type {
   border-bottom: 2px solid $color-light-blue;
 }
 
